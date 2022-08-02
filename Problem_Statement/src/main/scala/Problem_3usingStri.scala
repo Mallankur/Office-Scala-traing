@@ -1,5 +1,8 @@
+import scala.annotation.tailrec
+
 object Problem_3usingStri extends App {
-  def reducer2 ( n: Int  , multiplyer : Int   ) : BigInt = {
+  @tailrec
+  def reducer2(n: Int, multiplyer : Int   ) :Long = {
     if (n < 10) n
     else reducer2(reducer(n, multiplyer), 1)
   }
